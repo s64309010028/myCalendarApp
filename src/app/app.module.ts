@@ -6,11 +6,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Calendar } from '@ionic-native/calendar';
+import { AddEventPage } from '../pages/add-event/add-event';
+import { EditEventPage } from '../pages/edit-event/edit-event';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    AddEventPage,
+    EditEventPage
   ],
   imports: [
     BrowserModule,
@@ -19,9 +24,12 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    AddEventPage,
+    EditEventPage
   ],
   providers: [
+    Calendar,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
